@@ -18,24 +18,32 @@ function getValue (id) {
     text = document.getElementById(id).value; //value of the text input
     var oglength = text.length;
     
-     for (var i = 0; i < oglength ; i++) {
-     if(text.charAt(i)!= '='){
+     //for (var i = 0; i < oglength ; i++) 
+    var times;
+     for (var i = 0; i < oglength; i++) {
+     if(text.charAt(i) == '='){
+     
+     break;
+     
+     }else{ 
+     
+     times = i+1;
      
      
-     var text = this.split('');
-     text.splice(0, 1);
-     text = this.join('');
-     
-     }else{ if(text.charAt(i)== '='){
-     
-    break;
     }
+    }
+    
+    for (var p = 0; p < times; p++) {
+    var newtext = text.split("");
+     newtext.splice(0, p+1);
+     newtext.join();
      
-  
-
+     
+  }
+	var newnewtext= newtext.replace("a","");
    
     
-    document.getElementById("demo").innerHTML = text;
+    document.getElementById("demo").innerHTML = newnewtext;
     return false;
 }
 
