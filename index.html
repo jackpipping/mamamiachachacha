@@ -3,25 +3,43 @@
 
 <head>
 <script>
-var myHeader = youtubelink;
+var myHeader = "youtubelink";
 
 function myFunction() {
+	
+    
   document.getElementById("demo").innerHTML = myHeader;
 }
+
+function getValue (id) {
+    text = document.getElementById(id).value; //value of the text input
+    
+    document.getElementById("demo").innerHTML = text;
+    return false;
+}
+
 </script>
 </head/>
 <body>
 
 <p id="demo">A website link</p>
- <form action="/action_page.php" target="_blank"> 
+
+
+ 
 <label for="fname">Youtube Link:</label>
-<input type="text" id="youtubelink" name="youtubelink">
+
+<form onsubmit="return getValue('youtubelink')">
+	<input type="text" id="youtubelink" name="youtubelink">
+</form>
+
 <button type="button"
-onclick="myFunction()">
+onclick="return getValue('youtubelink')" onclick = "myFunction">
+
+
 Click me to have the link for youtube video.<br></button>
  </form>
 
-<h1 id="myHeader">My Hea</h1>
+
 
 
 
