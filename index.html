@@ -5,23 +5,47 @@
 <script>
 var myHeader = "youtubelink";
 
-function myFunction() {
+//function myFunction() {
 	
     
-  document.getElementById("demo").innerHTML = myHeader;
-}
+  //document.getElementById("demo").innerHTML = myHeader;
+//}
+
+
+
 
 function getValue (id) {
     text = document.getElementById(id).value; //value of the text input
+    var oglength = text.length;
+    
+     for (var i = 0; i < oglength ; i++) {
+     if(text.charAt(i)!= '='){
+     
+     
+     var text = this.split('');
+     text.splice(0, 1);
+     text = this.join('');
+     
+     }else{ if(text.charAt(i)== '='){
+     
+    break;
+    }
+     
+  
+
+   
     
     document.getElementById("demo").innerHTML = text;
     return false;
 }
 
+
+
 </script>
 </head/>
 <body>
 
+Copy this link and paste it in goolge: <br>
 <p id="demo">A website link</p>
 
 
@@ -45,4 +69,4 @@ Click me to have the link for youtube video.<br></button>
 
 
 </body>
-</html> 
+</html>
