@@ -18,9 +18,9 @@ function getValue (id) {
     text = document.getElementById(id).value; //value of the text input
     var oglength = text.length;
     
-     //for (var i = 0; i < oglength ; i++) 
+     
     var times;
-     for (var i = 0; i < oglength; i++) {
+     /*for (var i = 0; i < oglength; i++) {
      if(text.charAt(i) == '='){
      
      break;
@@ -31,17 +31,19 @@ function getValue (id) {
      
      
     }
-    }
+    }*/
     
-    for (var p = 0; p < times; p++) {
-    var newtext = text.split("");
+    /*for (var p = 0; p < times; p++) {
+    var newtext = text.split("=");
      newtext.splice(0, p+1);
-     newtext.join();
+     //newtext.join();
      
      
-  }
-	var newnewtext= newtext.replace("a","");
-   
+  }*/
+	//var newnewtext= newtext.replace("a","");
+    
+    var newtext = text.split("=");
+   newnewtext = newtext[1];
     
     document.getElementById("demo").innerHTML = newnewtext;
     return false;
